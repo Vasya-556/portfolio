@@ -14,7 +14,7 @@ header {
 
 footer {
   background-color: gainsboro;
-  padding: 10px 5px;
+  padding: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -31,4 +31,34 @@ footer section {
 footer div {
   flex-basis: 100%; 
   text-align: center; 
+}
+
+.Skills {
+  background-color: rgb(244, 231, 231);
+  padding: 15px;
+}
+
+.Projects {
+  background-color: rgb(99, 97, 97);
+  padding: 15px;
+}
+
+.SoftSkills {
+  background-color: rgb(52, 99, 99);
+  padding: 5px;
+}
+
+.SoftSkills img {
+  width: 150px;
+  height: 150px;
+}
+
+.TechSkills {
+  background-color: aqua;
+  padding: 15px;
+}
+
+.TechSkills img{
+  width: 40px;
+  height: 40px;
 }

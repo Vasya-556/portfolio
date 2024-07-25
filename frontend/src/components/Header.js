@@ -12,7 +12,6 @@ function Header() {
     <header>
         <nav>
             <ul>
-                <li><a href="/" onClick={(event) => handleScroll('about-me', event)}>About Me</a></li>
                 <li><a href="/" onClick={(event) => handleScroll('skills', event)}>Skills</a></li>
                 <li><a href="/" onClick={(event) => handleScroll('projects', event)}>Projects</a></li>
             </ul>
