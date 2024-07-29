@@ -1,51 +1,113 @@
-html {
-  scroll-behavior: smooth;
-  margin-top: 150px;
-  overflow-x: hidden;
+:root {
+  --color-header-bg: #1e3a8a; /* Dark blue for the header background */
+  --color-header-text: #ffffff; /* White text for the header */
+  --color-skills-bg: #3b82f6; /* Medium blue for the skills background */
+  --color-skills-text: #ffffff; /* White text for the skills */
+  --color-projects-bg: #93c5fd; /* Light blue for the projects background */
+  --color-projects-detail-bg: #dbeafe; /* Lighter blue for project details background */
+  --color-projects-detail-text: #1e3a8a; /* Dark blue for project details text */
+  --color-footer-bg: #1e3a8a; /* Dark blue for the footer background */
+  --color-footer-text: #ffffff; /* White text for the footer */
+  --color-button-bg: #2563eb; /* Bright blue for button background */
+  --color-button-hover-bg: #1e40af; /* Darker blue for button hover */
+  --color-button-text: #ffffff; /* White text for buttons */
 }
 
-header {
-  background-color: gray;
+[data-theme="dark"] {
+  --color-header-bg: #111827; /* Darker shade for dark mode */
+  --color-header-text: #f3f4f6; /* Light text for dark mode */
+  --color-skills-bg: #1e40af; /* Darker blue for dark mode */
+  --color-skills-text: #f3f4f6; /* Light text for dark mode */
+  --color-projects-bg: #1e3a8a; /* Darker blue for dark mode */
+  --color-projects-detail-bg: #1e3a8a; /* Darker blue for project details in dark mode */
+  --color-projects-detail-text: #f3f4f6; /* Light text for project details in dark mode */
+  --color-footer-bg: #111827; /* Darker shade for dark mode */
+  --color-footer-text: #f3f4f6; /* Light text for dark mode */
+  --color-button-bg: #1e40af; /* Darker blue for button background in dark mode */
+  --color-button-hover-bg: #2563eb; /* Lighter blue for button hover in dark mode */
+  --color-button-text: #f3f4f6; /* Light text for buttons in dark mode */
+}
+
+html {
+  scroll-behavior: smooth;
+  margin-top: 55px;
+  overflow-x: hidden;
+  background-color: var(--color-projects-bg);
+}
+
+.header {
+  background-color: var(--color-header-bg); 
+  color: var(--color-header-text); 
   padding: 10px 20px;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header li {
+  margin: 0 15px;
+}
+
+.header a {
+  color: var(--color-header-text);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  color: var(--color-button-bg);
 }
 
 footer {
-  background-color: gainsboro;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
   padding: 10px;
-  position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 footer section {
-  flex: 1; 
+  flex: 1;
   min-width: 200px;
 }
 
 footer div {
-  flex-basis: 100%; 
-  text-align: center; 
+  flex-basis: 100%;
+  text-align: center;
 }
 
 .Skills {
-  background-color: rgb(244, 231, 231);
-  padding: 15px;
-}
-
-.Projects {
-  background-color: rgb(99, 97, 97);
+  background-color: var(--color-skills-bg);
+  color: var(--color-skills-text);
   padding: 15px;
 }
 
 .SoftSkills {
-  background-color: rgb(52, 99, 99);
   padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill {
+  text-align: center;
 }
 
 .SoftSkills img {
@@ -54,11 +116,155 @@ footer div {
 }
 
 .TechSkills {
-  background-color: aqua;
   padding: 15px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .TechSkills img{
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+}
+
+.loading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  animation: blink 1.5s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.Projects {
+  padding: 15px;
+  background-color: var(--color-projects-bg);
+}
+
+.ProjectsDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: var(--color-projects-detail-bg); 
+  color: var(--color-projects-detail-text);
+}
+
+.ProjectsTopRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.ProjectDetailRow {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #000;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ProjectDetailRow:last-child {
+  border-right: none;
+}
+
+.ProjecrReadmeDetail {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.ShowReadmeButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.ShowReadmeButton:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+.ProjectDetailRow img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProjectDetailRow a {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: var(--color-projects-detail-text);
+}
+
+.ProjectDetailRow a:hover {
+  text-decoration: underline;
+}
+
+.NoImage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff0000;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ff0000;
+  background-color: #fdd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+
+.slider:before{
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider{
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before{
+  transform: translateX(25px);
 }

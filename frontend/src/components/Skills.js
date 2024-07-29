@@ -18,11 +18,28 @@ function Skills() {
   return (
     <div className='Skills'>
       <section className='SoftSkills'>
-        <img src={problemSolvingPng} alt='' title='Problem solving'/>
-        <img src={AdaptabilityPng} alt='' title='Adaptability'/>
-        <img src={CriticalThinkingPng} alt='' title='Criticall thinking'/>
-        <img src={TeamworkPng} alt='' title='Teamwork'/>
+        <div className='skill'>
+          <img src={problemSolvingPng} alt=''/>
+          <h2>Problem solving</h2>
+          <p>what is a problem solving</p>
+        </div>
+        <div className='skill'>
+          <img src={AdaptabilityPng} alt=''/>
+          <h2>Adaptability</h2>
+          <p>what is a Adaptability</p>
+        </div>
+        <div className='skill'>
+          <img src={CriticalThinkingPng} alt=''/>
+          <h2>Critical Thinking</h2>
+          <p>what is a Critical thinking</p>
+        </div>
+        <div className='skill'>
+          <img src={TeamworkPng} alt=''/>
+          <h2>Teamwork</h2>
+          <p>what is a Teamwork</p>
+        </div>
       </section>
+      <hr/>
       <section className='TechSkills'>
         <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank'>
           <img src={jsSvg} alt=''/>
