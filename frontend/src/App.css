@@ -94,6 +94,14 @@ footer div {
   text-align: center;
 }
 
+footer a {
+  color: #66c2ff;
+}
+
+footer a:visited {
+  color: #ffcc66;
+}
+
 .Skills {
   background-color: var(--color-skills-bg);
   color: var(--color-skills-text);
