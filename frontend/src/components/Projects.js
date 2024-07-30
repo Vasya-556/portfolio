@@ -42,7 +42,7 @@ function Projects() {
                         {repo.images && repo.images.length > 0 ? (
                             <div>
                                 {repo.images.map((image, index) => (
-                                    <img key={index} src={image} alt={`Image ${index + 1} in ${repo.name}`} style={{ maxWidth: '100%', height: 'auto' }} />
+                                    <img key={index} src={image} alt={`${index + 1} in ${repo.name}`} style={{ maxWidth: '100%', height: 'auto' }} />
                                 ))}
                             </div>
                         ) : (

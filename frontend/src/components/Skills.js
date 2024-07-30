@@ -21,22 +21,22 @@ function Skills() {
         <div className='skill'>
           <img src={problemSolvingPng} alt=''/>
           <h2>Problem solving</h2>
-          <p>what is a problem solving</p>
+          <p>Effectively identifying and implementing solutions to overcome challenges and achieve goals.</p>
         </div>
         <div className='skill'>
           <img src={AdaptabilityPng} alt=''/>
           <h2>Adaptability</h2>
-          <p>what is a Adaptability</p>
+          <p>Quickly adjusting to new conditions and embracing change with a flexible mindset.</p>
         </div>
         <div className='skill'>
           <img src={CriticalThinkingPng} alt=''/>
           <h2>Critical Thinking</h2>
-          <p>what is a Critical thinking</p>
+          <p>Analyzing situations logically to make reasoned judgments and informed decisions.</p>
         </div>
         <div className='skill'>
           <img src={TeamworkPng} alt=''/>
           <h2>Teamwork</h2>
-          <p>what is a Teamwork</p>
+          <p>Collaborating effectively with others to achieve common objectives and foster a cooperative environment.</p>
         </div>
       </section>
       <hr/>

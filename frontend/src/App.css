@@ -11,6 +11,10 @@
   --color-button-bg: #2563eb; /* Bright blue for button background */
   --color-button-hover-bg: #1e40af; /* Darker blue for button hover */
   --color-button-text: #ffffff; /* White text for buttons */
+  --color-projects-detail-linktext: #007acc;
+  --color-projects-detail-linktext-visited: #ff6600;
+  --color-aboutme-bg: #e1efff; /* Light grayish-blue for light mode */
+  --color-aboutme-text: #333333;
 }
 
 [data-theme="dark"] {
@@ -19,13 +23,17 @@
   --color-skills-bg: #1e40af; /* Darker blue for dark mode */
   --color-skills-text: #f3f4f6; /* Light text for dark mode */
   --color-projects-bg: #1e3a8a; /* Darker blue for dark mode */
-  --color-projects-detail-bg: #1e3a8a; /* Darker blue for project details in dark mode */
+  --color-projects-detail-bg: #153e75; /* Darker blue for project details in dark mode */
   --color-projects-detail-text: #f3f4f6; /* Light text for project details in dark mode */
   --color-footer-bg: #111827; /* Darker shade for dark mode */
   --color-footer-text: #f3f4f6; /* Light text for dark mode */
   --color-button-bg: #1e40af; /* Darker blue for button background in dark mode */
   --color-button-hover-bg: #2563eb; /* Lighter blue for button hover in dark mode */
   --color-button-text: #f3f4f6; /* Light text for buttons in dark mode */
+  --color-projects-detail-linktext: #66c2ff;
+  --color-projects-detail-linktext-visited: #ffcc66;
+  --color-aboutme-bg: #1e3a8a; /* Dark grayish-blue for dark mode */
+  --color-aboutme-text: #f3f4f6;
 }
 
 html {
@@ -213,11 +221,15 @@ footer a:visited {
   display: block;
   margin-top: 5px;
   text-decoration: none;
-  color: var(--color-projects-detail-text);
+  color: var(--color-projects-detail-linktext);
 }
 
 .ProjectDetailRow a:hover {
   text-decoration: underline;
+}
+
+.ProjectsDetail a:visited {
+  color: var(--color-projects-detail-linktext-visited);
 }
 
 .NoImage {
@@ -275,4 +287,41 @@ input:checked + .slider{
 
 input:checked + .slider:before{
   transform: translateX(25px);
+}
+
+.AboutMe {
+  display: flex;
+  align-items: flex-start; 
+  padding: 20px;
+  background-color: var(--color-aboutme-bg);
+  color: var(--color-aboutme-text);
+}
+
+.ImageContainer {
+  margin-right: 20px;
+}
+
+.ImageContainer img {
+  background-color: #2d3748;
+}
+
+/* .AboutMe img {
+  width: 200px;
+  height: 200px;
+  margin-right: 100px; 
+  border-radius: 50%;
+  border: 1px solid black;
+} */
+
+.TextContent {
+  display: flex;
+  flex-direction: column; /* Stack heading and paragraph vertically */
+}
+
+.TextContent h3 {
+  margin: 0; /* Remove default margin */
+}
+
+.TextContent p {
+  margin: 0; /* Remove default margin */
 }
