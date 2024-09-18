@@ -1,39 +1,43 @@
 :root {
-  --color-header-bg: #1e3a8a; /* Dark blue for the header background */
-  --color-header-text: #ffffff; /* White text for the header */
-  --color-skills-bg: #3b82f6; /* Medium blue for the skills background */
-  --color-skills-text: #ffffff; /* White text for the skills */
-  --color-projects-bg: #93c5fd; /* Light blue for the projects background */
-  --color-projects-detail-bg: #dbeafe; /* Lighter blue for project details background */
-  --color-projects-detail-text: #1e3a8a; /* Dark blue for project details text */
-  --color-footer-bg: #1e3a8a; /* Dark blue for the footer background */
-  --color-footer-text: #ffffff; /* White text for the footer */
-  --color-button-bg: #2563eb; /* Bright blue for button background */
-  --color-button-hover-bg: #1e40af; /* Darker blue for button hover */
-  --color-button-text: #ffffff; /* White text for buttons */
+  --color-header-bg: #1e3a8a;
+  --color-header-text: #ffffff;
+  --color-skills-bg: #3b82f6;
+  --color-skills-text: #ffffff;
+  --color-projects-bg: #93c5fd;
+  --color-projects-detail-bg: #dbeafe;
+  --color-projects-detail-text: #1e3a8a;
+  --color-footer-bg: #1e3a8a;
+  --color-footer-text: #ffffff;
+  --color-button-bg: #2563eb;
+  --color-button-hover-bg: #1e40af;
+  --color-button-text: #ffffff;
   --color-projects-detail-linktext: #007acc;
   --color-projects-detail-linktext-visited: #ff6600;
-  --color-aboutme-bg: #e1efff; /* Light grayish-blue for light mode */
+  --color-aboutme-bg: #e1efff;
   --color-aboutme-text: #333333;
 }
 
 [data-theme="dark"] {
-  --color-header-bg: #111827; /* Darker shade for dark mode */
-  --color-header-text: #f3f4f6; /* Light text for dark mode */
-  --color-skills-bg: #1e40af; /* Darker blue for dark mode */
-  --color-skills-text: #f3f4f6; /* Light text for dark mode */
-  --color-projects-bg: #1e3a8a; /* Darker blue for dark mode */
-  --color-projects-detail-bg: #153e75; /* Darker blue for project details in dark mode */
-  --color-projects-detail-text: #f3f4f6; /* Light text for project details in dark mode */
-  --color-footer-bg: #111827; /* Darker shade for dark mode */
-  --color-footer-text: #f3f4f6; /* Light text for dark mode */
-  --color-button-bg: #1e40af; /* Darker blue for button background in dark mode */
-  --color-button-hover-bg: #2563eb; /* Lighter blue for button hover in dark mode */
-  --color-button-text: #f3f4f6; /* Light text for buttons in dark mode */
+  --color-header-bg: #111827;
+  --color-header-text: #f3f4f6;
+  --color-skills-bg: #1e40af;
+  --color-skills-text: #f3f4f6;
+  --color-projects-bg: #1e3a8a;
+  --color-projects-detail-bg: #153e75;
+  --color-projects-detail-text: #f3f4f6;
+  --color-footer-bg: #111827;
+  --color-footer-text: #f3f4f6;
+  --color-button-bg: #1e40af;
+  --color-button-hover-bg: #2563eb;
+  --color-button-text: #f3f4f6;
   --color-projects-detail-linktext: #66c2ff;
   --color-projects-detail-linktext-visited: #ffcc66;
-  --color-aboutme-bg: #1e3a8a; /* Dark grayish-blue for dark mode */
+  --color-aboutme-bg: #1e3a8a;
   --color-aboutme-text: #f3f4f6;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -113,17 +117,23 @@ footer a:visited {
 .Skills {
   background-color: var(--color-skills-bg);
   color: var(--color-skills-text);
-  padding: 15px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
 }
 
 .SoftSkills {
   padding: 5px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .skill {
   text-align: center;
+  max-width: 300px;
+  margin: 10px;
 }
 
 .SoftSkills img {
@@ -135,11 +145,34 @@ footer a:visited {
   padding: 15px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.TechSkills img{
+.TechSkills img {
   width: 60px;
   height: 60px;
+}
+
+@media (max-width: 768px) {
+  .SoftSkills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 90%;
+  }
+
+  .TechSkills {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .TechSkills a {
+    margin: 10px;
+  }
 }
 
 .loading {
@@ -194,6 +227,13 @@ footer a:visited {
 .ProjecrReadmeDetail {
   margin-top: 10px;
   width: 100%;
+}
+
+.ProjecrReadmeDetail pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin: 0;
 }
 
 .ShowReadmeButton {
@@ -295,6 +335,7 @@ input:checked + .slider:before{
   padding: 20px;
   background-color: var(--color-aboutme-bg);
   color: var(--color-aboutme-text);
+  width: 100%;
 }
 
 .ImageContainer {
@@ -302,26 +343,49 @@ input:checked + .slider:before{
 }
 
 .ImageContainer img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
   background-color: #2d3748;
 }
 
-/* .AboutMe img {
-  width: 200px;
-  height: 200px;
-  margin-right: 100px; 
-  border-radius: 50%;
-  border: 1px solid black;
-} */
-
 .TextContent {
   display: flex;
-  flex-direction: column; /* Stack heading and paragraph vertically */
+  flex-direction: column;
+  margin-right: 15px;
+  padding-right: 25px;
 }
 
-.TextContent h3 {
-  margin: 0; /* Remove default margin */
-}
+@media (max-width: 768px) {
+  .ProjectsDetail {
+    padding: 10px;
+    margin: 10px 0;
+  }
 
-.TextContent p {
-  margin: 0; /* Remove default margin */
+  .ProjectsTopRow {
+    flex-direction: column;
+  }
+
+  .ProjectDetailRow {
+    width: 100%;
+    border-right: none;
+    margin-bottom: 10px;
+  }
+
+  .ProjectsTopRow img {
+    max-width: 100%;
+  }
+
+  .ProjecrReadmeDetail {
+    width: 100%;
+  }
+
+  .ShowReadmeButton {
+    width: 100%;
+  }
+
+  .LanguageChartContainer {
+    width: 100%;
+  }
 }

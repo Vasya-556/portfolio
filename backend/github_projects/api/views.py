@@ -28,21 +28,17 @@ def get_github_data(request):
         
         repo_name = repo['name']
         repo_url = f'https://api.github.com/repos/{username}/{repo_name}'
-        repo_html_url = repo['html_url']  # Base URL for resolving relative paths
+        repo_html_url = repo['html_url']  
         
-        # Fetch README
         readme_url = f'https://raw.githubusercontent.com/{username}/{repo_name}/master/README.md'
         readme_response = requests.get(readme_url)
         readme_content = readme_response.text if readme_response.status_code == 200 else None
 
-        # Extract and resolve image links from README
         image_urls = re.findall(r'!\[.*?\]\((.*?)\)', readme_content) if readme_content else []
         
-        # Base URL for raw images in GitHub repositories
         base_image_url = f'https://raw.githubusercontent.com/{username}/{repo_name}/master/'
         resolved_image_urls = [url if url.startswith('http') else f'{base_image_url}{url}' for url in image_urls]
         
-        # Fetch languages
         languages_url = f'{repo_url}/languages'
         languages_response = requests.get(languages_url, headers=headers)
         
@@ -53,7 +49,6 @@ def get_github_data(request):
             total_bytes = sum(languages_data.values())
             languages_percentage = {lang: (bytes / total_bytes) * 100 for lang, bytes in languages_data.items()} if total_bytes > 0 else {}
         
-        # Check for deployment link
         deployment_url = f'{repo_url}/deployments'
         deployment_response = requests.get(deployment_url, headers=headers)
         
