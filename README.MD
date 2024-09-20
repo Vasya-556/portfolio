@@ -5,7 +5,6 @@
 - [Portfolio](#portfolio)
 - [Table of Contents](#table-of-contents)
   - [Description](#description)
-  - [Usage](#usage)
   - [Installation](#installation)
     - [1. Clone the Repository](#1-clone-the-repository)
     - [2. Create virtual enviroment for python](#2-create-virtual-enviroment-for-python)
@@ -18,10 +17,6 @@
 
 This is a personal portfolio web application built using ReactJS and Django. The portfolio showcases a header, a footer, a skills section, and a projects section. Each project includes a brief description and links to live demos(if available) or repositories.
 ![](image.png)
-
-## Usage
-
-To start/restart the game press 'Start button'. Press anywhere on screen with mouse or spacebar to make bird jump.
 
 ## Installation
 
