@@ -41,42 +41,42 @@ function Skills() {
       </section>
       <hr/>
       <section className='TechSkills'>
-        <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank'>
+        <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank' rel='noreferrer'>
           <img src={jsSvg} alt=''/>
         </a>
-        <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank'>
+        <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank' rel='noreferrer'>
           <img src={htmlSvg} alt=''/>
         </a>
         
-        <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank'>
+        <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank' rel='noreferrer'>
           <img src={cssSvg} alt=''/>
         </a>
         
-        <a href='https://www.python.org/' target='_blank'>
+        <a href='https://www.python.org/' target='_blank' rel='noreferrer'>
           <img src={pythonSvg} alt=''/>
         </a>
         
-        <a href='https://reactjs.org/' target='_blank'>
+        <a href='https://reactjs.org/' target='_blank' rel='noreferrer'>
           <img src={reactjsSvg} alt=''/>
         </a>
         
-        <a href='https://www.djangoproject.com/' target='_blank'>
+        <a href='https://www.djangoproject.com/' target='_blank' rel='noreferrer'>
           <img src={djangoSvg} alt=''/>
         </a>
         
-        <a href='https://learn.microsoft.com/en-us/dotnet/csharp/' target='_blank'>
+        <a href='https://learn.microsoft.com/en-us/dotnet/csharp/' target='_blank' rel='noreferrer'>
           <img src={csharpSvg} alt=''/>
         </a>
         
-        <a href='https://www.w3schools.com/sql/' target='_blank'>
+        <a href='https://www.w3schools.com/sql/' target='_blank' rel='noreferrer'>
           <img src={sqlSvg} alt=''/>
         </a>
         
-        <a href='https://git-scm.com/' target='_blank'>
+        <a href='https://git-scm.com/' target='_blank' rel='noreferrer'>
           <img src={gitSvg} alt=''/>
         </a>
         
-        <a href='https://www.linux.org/' target='_blank'>
+        <a href='https://www.linux.org/' target='_blank' rel='noreferrer'>
           <img src={linuxSvg} alt=''/>
         </a>
       </section>
