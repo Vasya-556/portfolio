@@ -1,10 +1,11 @@
 import React from 'react'
+import ProfilePicturePng from '../pngs/Profile Picture.png';
 
 function AboutMe() {
   return (
     <div className='AboutMe'>
       <div className="ImageContainer">
-        <img src='Profile Picture.png' alt='Profile' />
+        <img src={ProfilePicturePng} alt='Profile' />
       </div>
       <div className='TextContent'>
         <h3>Kobryn Vasyl</h3>

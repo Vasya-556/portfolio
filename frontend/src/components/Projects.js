@@ -10,7 +10,7 @@ function Projects() {
     useEffect(() => {
         const fetchGithubProjects = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/get_github_data/');
+                const response = await axios.get('https://vasya556.pythonanywhere.com/api/get_github_data/');
                 setRepos(response.data);
             } catch (error){
                 console.error('There was an error fetching data!', error);
