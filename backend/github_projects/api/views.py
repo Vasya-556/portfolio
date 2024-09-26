@@ -1,6 +1,6 @@
 import requests
 import re
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from .token import token
 
 def get_github_data(request):
@@ -75,3 +75,6 @@ def get_github_data(request):
         })
     
     return JsonResponse(detailed_data, safe=False)
+
+def hello_world(request):
+    return HttpResponse('<h1>Hello World</h1>')
