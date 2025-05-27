@@ -47,7 +47,8 @@ function Projects() {
                             </div>
                         ) : (
                             <div>
-                                <p className='NoImage'>No images available :(</p>
+                                <img src='/portfolio/No_Image.png' alt=''></img>
+                                {/* <p className='NoImage'>No images available :(</p> */}
                             </div>
                         )}
                         </div>

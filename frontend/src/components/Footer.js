@@ -5,7 +5,7 @@ function Footer() {
     <footer>
         <section>
             <h4>Contacts</h4>
-            <p>Email: <a href="mailto:vkobrin556@gmail.com">vkobrin556@gmail.com</a></p>
+            <p>Email: <a href="mailto:kobrynvasyl2004@gmail.com">kobrynvasyl2004@gmail.com</a></p>
         </section>
         <section>
             <h4>Follow Me</h4>
@@ -13,7 +13,9 @@ function Footer() {
         </section>
         <section>
             <h4>Resume</h4>
-            <p><a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download</a></p>
+            <p>
+    <a href="/portfolio/Kobryn_Vasyl_Full_Stack_Developer_Resume.pdf" download>Download</a>
+  </p>
         </section>
       <div>
         <p>&copy; {new Date().getFullYear()} Vasyl Kobryn. All rights reserved.</p>
