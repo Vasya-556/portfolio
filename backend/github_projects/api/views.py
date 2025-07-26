@@ -28,8 +28,11 @@ def get_github_data(request):
         
         repo_name = repo['name']
         repo_url = f'https://api.github.com/repos/{username}/{repo_name}'
-        print(f'Checking README files for repo: {repo_name}')
-        repo_html_url = repo['html_url']  
+        # print(f'Checking README files for repo: {repo_name}')
+        # repo_html_url = repo['html_url']
+        description = repo['description']
+        if description and '&' in description:
+            continue
         
         readme_names = ["README.md", "README.MD", "ReadMe.md", "readme.md"]
 
@@ -37,7 +40,7 @@ def get_github_data(request):
         for filename in readme_names:
             readme_url = f'https://raw.githubusercontent.com/{username}/{repo_name}/master/{filename}'
             response = requests.get(readme_url)
-            print(f"Trying: {filename} => {response.status_code}")
+            # print(f"Trying: {filename} => {response.status_code}")
             if response.status_code == 200:
                 readme_content = response.text
                 break
