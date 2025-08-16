@@ -20,11 +20,7 @@ def get_github_data(request):
     repos_data = repos_response.json()
     detailed_data = []
     
-    excluded_repos = ['AP', 'CG', 'DBS', 'CPP', 'Vasya-556', 'OOP1', 'PDS', 'PGI', 'portfolio', 'tic-tac-toe', 'To-Do-List']
-    
     for repo in repos_data:
-        if repo['name'] in excluded_repos:
-            continue
         
         repo_name = repo['name']
         repo_url = f'https://api.github.com/repos/{username}/{repo_name}'

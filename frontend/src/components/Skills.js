@@ -5,15 +5,14 @@ import cssSvg from '../svgs/css.svg';
 import pythonSvg from '../svgs/python.svg';
 import reactjsSvg from '../svgs/reactjs.svg';
 import djangoSvg from '../svgs/django.svg';
-import csharpSvg from '../svgs/csharp.svg';
 import sqlSvg from '../svgs/sql.svg';
 import gitSvg from '../svgs/git.svg';
 import linuxSvg from '../svgs/linux.svg';
+import ts from '../svgs/ts.svg';
 import problemSolvingPng from '../pngs/problem-solving.png';
 import AdaptabilityPng from '../pngs/Adaptability.png';
 import CriticalThinkingPng from '../pngs/Critical_Thinking.png';
 import TeamworkPng from '../pngs/Teamwork.png';
-
 function Skills() {
   return (
     <div className='Skills'>
@@ -64,8 +63,8 @@ function Skills() {
           <img src={djangoSvg} alt=''/>
         </a>
         
-        <a href='https://learn.microsoft.com/en-us/dotnet/csharp/' target='_blank' rel='noreferrer'>
-          <img src={csharpSvg} alt=''/>
+        <a href='https://www.typescriptlang.org/docs/' target='_blank' rel='noreferrer'>
+          <img src={ts} alt=''/>
         </a>
         
         <a href='https://www.w3schools.com/sql/' target='_blank' rel='noreferrer'>

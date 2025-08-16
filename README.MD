@@ -25,7 +25,7 @@ Follow these steps to get started
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/Vasya-556/portfolio.git
-cd petshop
+cd portfolio
 ```
 
 ### 2. Create virtual enviroment for python
@@ -46,7 +46,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### 4. Run frontend server
+### 4. Install dependencies
+```bash
+cd frontend
+npm install
+```
+
+### 5. Run frontend server
 ```bash
 cd frontend
 npm start
