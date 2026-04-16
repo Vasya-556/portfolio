@@ -23,9 +23,9 @@ function Header() {
                 <li><a href="/" onClick={(event) => handleScroll('aboutMe', event)}>About Me</a></li>
                 <li><a href="/" onClick={(event) => handleScroll('skills', event)}>Skills</a></li>
                 <li><a href="/" onClick={(event) => handleScroll('projects', event)}>Projects</a></li>
-                <LightDarkModeToggle/>
             </ul>
         </nav>
+        <LightDarkModeToggle/>
     </header>
   )
 }
