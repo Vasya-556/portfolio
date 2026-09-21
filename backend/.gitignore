@@ -1,1 +1,3 @@
-github_projects/api/token.py
+/node_modules
+/dist
+.env
