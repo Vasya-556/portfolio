@@ -1,15 +1,12 @@
-import { fetchAPI } from "./api/api";
+import { Header } from "./components";
+import { Home } from "./pages";
 
 function App() {
-  fetchAPI({
-    url: "/test",
-    method: "get",
-  }).then(data => {
-    console.log(data);
-  });
-  
+
   return (
     <div>
+      <Header/>
+      <Home/>
     </div>
   );
 }
