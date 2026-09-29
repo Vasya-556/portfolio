@@ -2,6 +2,7 @@ import express from "express";
 import type { Request, Response} from "express";
 import cors from "cors";
 import { appConfig } from "./config/index.js";
+import { projectsRoutes } from "./routes/index.js";
 
 const app = express();
 
@@ -17,9 +18,7 @@ app.get("/", (req: Request, res: Response) => {
 	res.send("<h1>Hello world!</h1>")
 })
 
-app.get("/test", (req: Request, res: Response) => {
-	res.json({"hello": "world"})
-})
+app.use("/projects", projectsRoutes.router)
 
 const port = 8000;
 
