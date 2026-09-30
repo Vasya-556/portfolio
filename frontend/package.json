@@ -3,24 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@microcharts/react": "^0.19.1",
     "@testing-library/dom": "^10.4.2",
-    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-scripts": "^5.0.1",
+    "vite": "^8.3.1",
+    "vite-plugin-svgr": "^5.2.0",
+    "vite-tsconfig-paths": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": [
