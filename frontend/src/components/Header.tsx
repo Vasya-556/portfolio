@@ -2,7 +2,11 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+      <a href='#home'>Home</a>
+      <a href='#projects'>Projects</a>
+      <a href='#skills'>Skills</a>
+    </div>
   )
 }
 

@@ -1,0 +1,58 @@
+{
+  "Languages": [
+    {
+      "name": "JavaScript",
+      "icon": "/assets/js.svg"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "/assets/ts.svg"
+    },
+    {
+      "name": "Python",
+      "icon": "/assets/python.svg"
+    }
+  ],
+  "Web": [
+    {
+      "name": "HTML",
+      "icon": "/assets/html.svg"
+    },
+    {
+      "name": "CSS",
+      "icon": "/assets/css.svg"
+    },
+    {
+      "name": "Node.js",
+      "icon": "/assets/node.js.svg"
+    },
+    {
+      "name": "Express.js",
+      "icon": "/assets/express.js.svg"
+    },
+    {
+      "name": "React",
+      "icon": "/assets/react.svg"
+    }
+  ],
+  "Database": [
+    {
+      "name": "PostgreSQL",
+      "icon": "/assets/postgreSQL.svg"
+    }
+  ],
+  "Tools": [
+    {
+      "name": "Git",
+      "icon": "/assets/git.svg"
+    },
+    {
+      "name": "GitHub",
+      "icon": "/assets/github.svg"
+    },
+    {
+      "name": "VS Code",
+      "icon": "/assets/vs code.svg"
+    }
+  ]
+}

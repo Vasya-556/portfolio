@@ -1,32 +1,16 @@
 import React from 'react'
+import data from "../data/skills.json";
+import SkillsCard from './SkillsCard';
 
 function Skills() {
   return (
-    <div>
-        <div>
-            <h4>Languages:</h4>
-            <p>JavaScript</p>
-            <p>TypeScript</p>
-            <p>Python</p>
-        </div>
-        <div>
-            <h4>Web:</h4>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Node.js</p>
-            <p>Express.js</p>
-            <p>React</p>
-        </div>
-        <div>
-            <h4>Database:</h4>
-            <p>PostgreSQL</p>
-        </div>
-        <div>
-            <h4>Tools:</h4>
-            <p>Git</p>
-            <p>GitHub</p>
-            <p>VS Code</p>
-        </div>
+    <div id='skills'>
+        <h2>Skills: </h2>
+        {Object.entries(data).map((obj) => (
+            <div>
+                <SkillsCard category={obj[0]} skills={obj[1]}/>
+            </div>
+        ))}
     </div>
   )
 }
