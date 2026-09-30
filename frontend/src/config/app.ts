@@ -1,6 +1,6 @@
 const appConfig = {
-    backendURL: import.meta.env.REACT_APP_BACKEND_URL,
-    isProd: import.meta.env.REACT_APP_IS_PRODUCTION,
+    backendURL: import.meta.env.VITE_BACKEND_URL,
+    isProd: import.meta.env.VITE_IS_PRODUCTION,
 }
 
 export {

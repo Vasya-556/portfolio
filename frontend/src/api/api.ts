@@ -12,6 +12,7 @@ const fetchAPI = (
             method: args.method
         }
     ).then(async res => {
+        console.log(res)
         const message = await res.json()
         if (res.ok){
             return message
