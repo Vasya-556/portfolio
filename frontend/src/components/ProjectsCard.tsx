@@ -1,4 +1,5 @@
 import React from 'react'
+import { PieChart } from 'react-minimal-pie-chart';
 
 type Project = {
   html_url: string | null,
@@ -17,6 +18,15 @@ type Props = {
 }
 
 function ProjectsCard({ projects }: Props) {
+
+    const getCharacterCode = (word: string): number => {
+        let sum = 0;
+        for (let c of word){
+            sum += c.charCodeAt(0)
+        }
+        return sum;
+    }
+
   return (
     <div>
         {projects.map((project, index) => (
@@ -31,8 +41,18 @@ function ProjectsCard({ projects }: Props) {
                     project.languages &&
                         <div>
                             <p>Languages: </p>
-                            {Object.entries(project.languages).map(([language, percentage]) => (
-                                <div key={language}>
+                            <div style={{"width": "100px"}}>
+                                <PieChart
+                                    data={Object.entries(project.languages).map(([language, percentage], index) => ({
+                                        title: language,
+                                        value: percentage,
+                                        color: `hsl(${getCharacterCode(language) * 10}, 60%, 60%)`
+                                    }))}
+                                />
+                            </div>
+                            {Object.entries(project.languages).map(([language, percentage], index) => (
+                                <div key={index}>
+                                    <span style={{ "backgroundColor": `hsl(${getCharacterCode(language) * 10}, 60%, 60%)`, "width": "10px", "height": "10px", "display": "inline-block"}}></span>
                                     <span>{language}: </span>
                                     <span>{percentage}%</span>
                                 </div>
