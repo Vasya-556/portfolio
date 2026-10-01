@@ -1,21 +1,35 @@
 import React from 'react'
+import heroData from "../data/hero.json";
 
 function Hero() {
   return (
     <div id='Home'>
         <div>
-            <h2>Vasyl Kobryn</h2>
-            <h3>Junior Full-Stack Web Developer</h3>
-            <p>Bachelor of Computer Science</p>
+            <h2>{heroData.Hero.name}</h2>
+            <h3>{heroData.Hero.title}</h3>
+            <p>{heroData.Hero.degree}</p>
         </div>
         <div>
           <h3>Contact me:</h3>
-          <a href="https://github.com/Vasya-556">
-            <img alt="Github" src="https://img.shields.io/badge/-GitHub-333333?style=flat&logo=data:image/svg%2bxml;base64,PHN2ZyB2aWV3Qm94PSItMiAtMiAyNC4wMCAyNC4wMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBmaWxsPSIjMDAwMDAwIj48ZyBpZD0iU1ZHUmVwb19iZ0NhcnJpZXIiIHN0cm9rZS13aWR0aD0iMCI+PHJlY3QgeD0iLTIiIHk9Ii0yIiB3aWR0aD0iMjQuMDAiIGhlaWdodD0iMjQuMDAiIHJ4PSIwIiBmaWxsPSIjZmZmZmZmIiBzdHJva2V3aWR0aD0iMCI+PC9yZWN0PjwvZz48ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvZz48ZyBpZD0iU1ZHUmVwb19pY29uQ2FycmllciI+IDx0aXRsZT5naXRodWIgWyMxNDJdPC90aXRsZT4gPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+IDxkZWZzPiA8L2RlZnM+IDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiA8ZyBpZD0iRHJpYmJibGUtTGlnaHQtUHJldmlldyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0MC4wMDAwMDAsIC03NTU5LjAwMDAwMCkiIGZpbGw9IiMwMDAwMDAiPiA8ZyBpZD0iaWNvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU2LjAwMDAwMCwgMTYwLjAwMDAwMCkiPiA8cGF0aCBkPSJNOTQsNzM5OSBDOTkuNTIzLDczOTkgMTA0LDc0MDMuNTkgMTA0LDc0MDkuMjUzIEMxMDQsNzQxMy43ODIgMTAxLjEzOCw3NDE3LjYyNCA5Ny4xNjcsNzQxOC45ODEgQzk2LjY2LDc0MTkuMDgyIDk2LjQ4LDc0MTguNzYyIDk2LjQ4LDc0MTguNDg5IEM5Ni40OCw3NDE4LjE1MSA5Ni40OTIsNzQxNy4wNDcgOTYuNDkyLDc0MTUuNjc1IEM5Ni40OTIsNzQxNC43MTkgOTYuMTcyLDc0MTQuMDk1IDk1LjgxMyw3NDEzLjc3NyBDOTguMDQsNzQxMy41MjMgMTAwLjM4LDc0MTIuNjU2IDEwMC4zOCw3NDA4LjcxOCBDMTAwLjM4LDc0MDcuNTk4IDk5Ljk5Miw3NDA2LjY4NCA5OS4zNSw3NDA1Ljk2NiBDOTkuNDU0LDc0MDUuNzA3IDk5Ljc5Nyw3NDA0LjY2NCA5OS4yNTIsNzQwMy4yNTIgQzk5LjI1Miw3NDAzLjI1MiA5OC40MTQsNzQwMi45NzcgOTYuNTA1LDc0MDQuMzAzIEM5NS43MDYsNzQwNC4wNzYgOTQuODUsNzQwMy45NjIgOTQsNzQwMy45NTggQzkzLjE1LDc0MDMuOTYyIDkyLjI5NSw3NDA0LjA3NiA5MS40OTcsNzQwNC4zMDMgQzg5LjU4Niw3NDAyLjk3NyA4OC43NDYsNzQwMy4yNTIgODguNzQ2LDc0MDMuMjUyIEM4OC4yMDMsNzQwNC42NjQgODguNTQ2LDc0MDUuNzA3IDg4LjY0OSw3NDA1Ljk2NiBDODguMDEsNzQwNi42ODQgODcuNjE5LDc0MDcuNTk4IDg3LjYxOSw3NDA4LjcxOCBDODcuNjE5LDc0MTIuNjQ2IDg5Ljk1NCw3NDEzLjUyNiA5Mi4xNzUsNzQxMy43ODUgQzkxLjg4OSw3NDE0LjA0MSA5MS42Myw3NDE0LjQ5MyA5MS41NCw3NDE1LjE1NiBDOTAuOTcsNzQxNS40MTggODkuNTIyLDc0MTUuODcxIDg4LjYzLDc0MTQuMzA0IEM4OC42Myw3NDE0LjMwNCA4OC4xMDEsNzQxMy4zMTkgODcuMDk3LDc0MTMuMjQ3IEM4Ny4wOTcsNzQxMy4yNDcgODYuMTIyLDc0MTMuMjM0IDg3LjAyOSw3NDEzLjg3IEM4Ny4wMjksNzQxMy44NyA4Ny42ODQsNzQxNC4xODUgODguMTM5LDc0MTUuMzcgQzg4LjEzOSw3NDE1LjM3IDg4LjcyNiw3NDE3LjIgOTEuNTA4LDc0MTYuNTggQzkxLjUxMyw3NDE3LjQzNyA5MS41MjIsNzQxOC4yNDUgOTEuNTIyLDc0MTguNDg5IEM5MS41MjIsNzQxOC43NiA5MS4zMzgsNzQxOS4wNzcgOTAuODM5LDc0MTguOTgyIEM4Ni44NjUsNzQxNy42MjcgODQsNzQxMy43ODMgODQsNzQwOS4yNTMgQzg0LDc0MDMuNTkgODguNDc4LDczOTkgOTQsNzM5OSIgaWQ9ImdpdGh1Yi1bIzE0Ml0iPiA8L3BhdGg+IDwvZz4gPC9nPiA8L2c+IDwvZz48L3N2Zz4="/>
-          </a>
-          <a href="mailto:kobrynvasyl2004@gmail.com">
-            <img alt="Email" src="https://img.shields.io/badge/Email-kobrynvasyl2004@gmail.com-blue?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTkyIDE5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSJub25lIj4NCiAgPGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiPjwvZz4NCiAgPGcgaWQ9IlNWR1JlcG9fdHJhY2VyQ2FycmllciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L2c+DQogIDxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4NCiAgICA8cGF0aA0KICAgICAgc3Ryb2tlPSIjMDAwMDAwIg0KCSAgZmlsbD0iI0VBNDMzNSINCiAgICAgIHN0cm9rZS1saW5lam9pbj0icm91bmQiDQogICAgICBzdHJva2Utd2lkdGg9IjMiDQogICAgICBkPSJNMjIgNTcuMjY1VjE0MmMwIDUuNTIzIDQuNDc3IDEwIDEwIDEwaDI0Vjk1LjA1Nmw0MCAzMC4yNzggNDAtMzAuMjc4VjE1MmgyNGM1LjUyMyAwIDEwLTQuNDc3IDEwLTEwVjU3LjI2NWMwLTEzLjIzMy0xNS4xNS0yMC43NDYtMjUuNjg0LTEyLjczNkw5NiA4MS4yNjUgNDcuNjg0IDQ0LjUzQzM3LjE1IDM2LjUxOSAyMiA0NC4wMzIgMjIgNTcuMjY1WiINCiAgICA+PC9wYXRoPg0KICA8L2c+DQo8L3N2Zz4NCg=="/>
-          </a>
+          {
+            Object.entries(heroData["Contact me"]).map(([name, item], index) => (
+              <div key={index}>
+                <a
+                  href={item.href}
+                  target='_blank'
+                  {...("download" in item && item.download && { download: true })}
+                  {...("style" in item && item.style && { style: item.style })}
+                >
+                  {"text" in item && item.text && <span>{item.text}</span>}
+                  <img
+                    alt={name}
+                    src={item.src}
+                    {...("style" in item && item.imgStyle && { style: item.imgStyle })}
+                  />
+                </a>
+              </div>
+            ))
+          }
         </div>
     </div>
   )
