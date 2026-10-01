@@ -2,6 +2,8 @@ import React from 'react'
 import { useFetch } from '../hooks'
 import { projectsService } from '../service';
 import ProjectsCard from './ProjectsCard';
+import { Tailspin } from 'ldrs/react'
+import 'ldrs/react/Tailspin.css'
 
 type Project = {
   html_url: string | null,
@@ -26,7 +28,14 @@ function Projects() {
 
   if (projectsLoading) {
     return (
-      <div>Loading ...</div>
+      <div>
+        <Tailspin
+          size="40"
+          stroke="5"
+          speed="0.9"
+          color="black"
+        />
+      </div>
     );
   }
 
