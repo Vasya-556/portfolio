@@ -1,20 +1,9 @@
 import React from 'react'
 import { PieChart } from 'react-minimal-pie-chart';
-
-type Project = {
-  html_url: string | null,
-  description: string | null,
-  homepage: string | null,
-  name: string,
-  languages: Languages | null
-}
-
-type Languages = {
-  [key: string]: number
-}
+import { projectsTypes } from '../types';
 
 type Props = {
-    projects: Project[]
+    projects: projectsTypes.Project[]
 }
 
 function ProjectsCard({ projects }: Props) {
