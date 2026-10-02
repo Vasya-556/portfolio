@@ -1,7 +1,7 @@
-import Header from "./Header";
-import Hero from "./Hero";
-import Projects from "./Projects";
-import Skills from "./Skills";
+import Header from "./header/Header";
+import Hero from "./hero/Hero";
+import Projects from "./projects/Projects";
+import Skills from "./skills/Skills";
 
 export {
     Header,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { PieChart } from 'react-minimal-pie-chart';
-import { projectsTypes } from '../types';
+import { projectsTypes } from '../../types';
 
 type Props = {
     projects: projectsTypes.Project[]

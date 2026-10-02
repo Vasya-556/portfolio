@@ -3,7 +3,7 @@ import {
     Hero, 
     Skills,
     Projects, 
-} from '../components'
+} from '../../components'
 
 function Home() {
   return (

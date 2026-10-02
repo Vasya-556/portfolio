@@ -1,5 +1,5 @@
 import React from 'react'
-import heroData from "../data/hero.json";
+import heroData from "../../data/hero.json";
 
 function Hero() {
   return (
