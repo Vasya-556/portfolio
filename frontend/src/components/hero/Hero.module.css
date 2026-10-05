@@ -1,0 +1,13 @@
+.hero, .info, .contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero, .info {
+    gap: 1em;
+}
+
+.contact {
+    gap: 0.5em;
+    align-items: center;
+}

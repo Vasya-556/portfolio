@@ -1,0 +1,46 @@
+.skillsCards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.skillsCards h4 {
+    width: 5em;
+}
+
+.card {
+    background: var(--color-secondary);
+    border-radius: 0.5em;
+    width: 8em;
+    height: 6em;
+    padding: 0.5em;
+}
+
+.card:hover {
+    transform: translateY(-0.1em);
+    box-shadow: 0 0.8em 2em;
+}
+
+.cardTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.proficiency {
+    display: flex;
+    gap: 0.1em;
+}
+
+.proficiency span {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: 0.2em solid var(--color-text);
+}
+
+.filled {
+    background: var(--color-text);
+}

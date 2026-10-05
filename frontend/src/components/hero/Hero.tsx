@@ -1,32 +1,31 @@
-import React from 'react'
 import heroData from "../../data/hero.json";
+import styles from "./Hero.module.css";
+import { Link } from "../.";
 
 function Hero() {
   return (
-    <div id='Home'>
-        <div>
-            <h2>{heroData.Hero.name}</h2>
+    <div id='Home' className={styles.hero}>
+        <div className={styles.info}>
+            <h1>{heroData.Hero.name}</h1>
             <h3>{heroData.Hero.title}</h3>
             <p>{heroData.Hero.degree}</p>
         </div>
-        <div>
+        <div className={styles.contact}>
           <h3>Contact me:</h3>
           {
             Object.entries(heroData["Contact me"]).map(([name, item], index) => (
               <div key={index}>
-                <a
+                <Link 
                   href={item.href}
                   target='_blank'
-                  {...("download" in item && item.download && { download: true })}
-                  {...("style" in item && item.style && { style: item.style })}
+                  download={item.download}
+                  text={item.text}
                 >
-                  {"text" in item && item.text && <span>{item.text}</span>}
                   <img
                     alt={name}
                     src={item.src}
-                    {...("style" in item && item.imgStyle && { style: item.imgStyle })}
                   />
-                </a>
+                </Link>
               </div>
             ))
           }
