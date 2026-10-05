@@ -8,10 +8,10 @@ function Projects() {
   const projectsData = projectsDataRaw as unknown as projectsTypes.Project[];
   
   return (
-    <div id='projects' className={styles.container}>
+    <section id='projects' className={styles.container}>
       <h2>Projects:</h2>
       <ProjectsCard projects={projectsData ?? []}/>
-    </div>
+    </section>
   )
 }
 

@@ -21,7 +21,7 @@ function ProjectsCard({ projects }: Props) {
   return (
     <div className={styles.projectsCards}>
         {projects.map((project, index) => (
-            <div key={index} className={styles.card}>
+            <article key={index} className={styles.card}>
                 <div>
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
@@ -38,9 +38,9 @@ function ProjectsCard({ projects }: Props) {
                                     }))}
                                 />
                             </div>
-                            <div key={index} className={styles.languageLegend}>
+                            <div className={styles.languageLegend}>
                                 {Object.entries(project.languages).map(([language, percentage], index) => (
-                                        <div className={styles.languageRow}>
+                                        <div key={index} className={styles.languageRow}>
                                             <span 
                                                 style={{ "backgroundColor": `hsl(${getCharacterCode(language) * 10}, 60%, 60%)`}}
                                                 className={styles.languageItem}
@@ -70,7 +70,7 @@ function ProjectsCard({ projects }: Props) {
                         />
                     }
                 </div>
-            </div>
+            </article>
         ))}
     </div>
   )

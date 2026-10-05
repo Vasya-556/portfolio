@@ -14,7 +14,7 @@ function SkillsCard({category, skills}: Props) {
     <div style={{ "display": "flex", "gap": "10px" }} className={styles.skillsCards}>
         <h4>{category}: </h4>
         {skills.map((skill, index) => (
-            <div key={index} className={styles.card}>
+            <article key={index} className={styles.card}>
                 <div className={styles.cardTitle}>
                     <p>{skill.name}</p>
                     <img src={skill.icon} alt='' width={40}></img>
@@ -31,7 +31,7 @@ function SkillsCard({category, skills}: Props) {
                         ))
                     }
                 </div>
-            </div>
+            </article>
         ))}
     </div>
   )

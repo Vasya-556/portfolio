@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import Link from "./link/Link";
 import ProjectsCard from "./projects/ProjectsCard";
 import SkillsCard from "./skills/SkillsCard";
+import ThemeToggle from "./themeToggle/ThemeToggle";
 
 export {
     Header,
@@ -14,4 +15,5 @@ export {
     Link,
     ProjectsCard,
     SkillsCard,
+    ThemeToggle,
 }
