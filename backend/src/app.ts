@@ -7,21 +7,22 @@ import { projectsRoutes } from "./routes/index.js";
 const app = express();
 
 const corsOptions = {
-	origin: [appConfig.origin],
-	credentials: false,
+    origin: [appConfig.origin],
+    credentials: false,
 }
 
 app.use(cors(corsOptions))
-app.use(express.json());
+app.use(express.json({
+    limit: "5mb"
+}));
+app.disable("x-powered-by")
 
-app.get("/", (req: Request, res: Response) => {
-	res.send("<h1>Hello world!</h1>")
+app.get("/health", (req: Request, res: Response) => {
+    res.status(200).json({ message: "ok"})
 })
 
 app.use("/projects", projectsRoutes.router)
 
-const port = 8000;
-
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}\nhttp://localhost:${port}`)
-})
+export {
+    app
+}
