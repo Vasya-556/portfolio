@@ -21,7 +21,8 @@ function ThemeToggle() {
   return (   
     <div className={styles.themeToggle}>
       <label className={styles.switch}>
-          <input 
+          <input
+            className='toggle' 
             type="checkbox" 
             defaultChecked={isLightMode}
             onChange={toggleTheme}

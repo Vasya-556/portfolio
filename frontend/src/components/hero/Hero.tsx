@@ -4,7 +4,7 @@ import { Link } from "../.";
 
 function Hero() {
   return (
-    <section id='Home' className={styles.hero}>
+    <section id='home' className={styles.hero}>
         <div className={styles.info}>
             <h1>{heroData.Hero.name}</h1>
             <h3>{heroData.Hero.title}</h3>

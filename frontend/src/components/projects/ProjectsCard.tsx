@@ -66,7 +66,7 @@ function ProjectsCard({ projects }: Props) {
                         <Link 
                             href={project.homepage} 
                             target='_blank' 
-                            text='Visit Demo'
+                            text='Visit'
                         />
                     }
                 </div>
