@@ -6,8 +6,9 @@
     padding: 1em;
 }
 
-.skillsCards h4 {
+.category {
     width: 5em;
+    padding: 1em;
 }
 
 .card {
@@ -27,6 +28,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cardTitle img {
+    width: 2.5em;
+    height: 2.5em;
 }
 
 .proficiency {

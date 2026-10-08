@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@font-face {
+  font-family: "Nunito";
+  font-weight: 400;
+  src: url("/fonts/Nunito-Regular.woff2");
+}
+/* 
+@font-face {
+  font-family: "Nunito";
+  font-weight: 700;
+  src: url("/fonts/Nunito-Bold.woff2");
+} */
 
 :root {
   --z-header: 1;

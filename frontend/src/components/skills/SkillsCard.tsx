@@ -12,12 +12,12 @@ type Props = {
 function SkillsCard({category, skills}: Props) {
   return (
     <div style={{ "display": "flex", "gap": "10px" }} className={styles.skillsCards}>
-        <h4>{category}: </h4>
+        <h4 className={styles.category}>{category}: </h4>
         {skills.map((skill, index) => (
             <article key={index} className={styles.card}>
                 <div className={styles.cardTitle}>
                     <p>{skill.name}</p>
-                    <img src={skill.icon} alt='' width={40}></img>
+                    <img src={skill.icon} alt=''></img>
                 </div>
                 <div className={styles.proficiency}>
                     {

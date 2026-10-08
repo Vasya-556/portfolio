@@ -6,7 +6,10 @@ import styles from "./themeToggle.module.css";
 
 function ThemeToggle() {
   const [isLightMode, setIsLightMode] = useState(() => {
-    return localStorage.getItem('theme') === 'light';
+    if (localStorage.getItem('theme')){
+      return localStorage.getItem('theme') === 'light';
+    }
+    return true
   });
 
   useEffect(() => {
@@ -20,7 +23,7 @@ function ThemeToggle() {
 
   return (   
     <div className={styles.themeToggle}>
-      <label className={styles.switch}>
+      <label className={styles.switch} aria-label='Theme toggle'>
           <input
             className='toggle' 
             type="checkbox" 

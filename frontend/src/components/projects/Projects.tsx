@@ -1,4 +1,3 @@
-import React from 'react'
 import { ProjectsCard } from '../.';
 import projectsDataRaw from "../../data/projects.json";
 import { projectsTypes } from '../../types';

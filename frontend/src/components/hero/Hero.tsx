@@ -1,14 +1,14 @@
 import heroData from "../../data/hero.json";
 import styles from "./Hero.module.css";
-import { Link } from "../.";
+import { Link } from "../../components";
 
 function Hero() {
   return (
     <section id='home' className={styles.hero}>
         <div className={styles.info}>
             <h1>{heroData.Hero.name}</h1>
-            <h3>{heroData.Hero.title}</h3>
-            <p>{heroData.Hero.degree}</p>
+            <h2>{heroData.Hero.title}</h2>
+            <h3>{heroData.Hero.degree}</h3>
         </div>
         <div className={styles.contact}>
           <h3>Contact me:</h3>
