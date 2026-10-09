@@ -1,22 +1,16 @@
 import styles from "./Header.module.css";
-import { 
-  Link as ActionLink, 
-  ThemeToggle 
-} from "../../components";
+import { ThemeToggle } from "../../components";
 import { Link } from "react-router-dom";
+import linkStyles from "../link/Link.module.css";
 
 function Header() {
   return (
     <header className={styles.container}>
       <div className={styles.content}>
         <nav className={styles.navbar}>
-          {/* <ActionLink href="#home" text="Home"/>
-          <ActionLink href="#skills" text="Skills"/>
-          <ActionLink href="#projects" text="Projects"/> */}
-          <Link to="/">Home</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/projects">Projects</Link>
-          {/* <ActionLink text="Home"><Link to="/"/></ActionLink> */}
+          <Link to="/" className={linkStyles.link}>Home</Link>
+          <Link to="/skills" className={linkStyles.link}>Skills</Link>
+          <Link to="/projects" className={linkStyles.link}>Projects</Link>
         </nav>
         <ThemeToggle/>
       </div>
