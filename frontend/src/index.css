@@ -21,6 +21,7 @@
   --color-secondary: #98c1d9;
   --color-accent: #ee6c4d;
   --color-surface: #f5f5f5;
+  --color-card: #6888B6;
 }
 
 :root[data-theme="dark"] {
@@ -30,6 +31,7 @@
   --color-secondary: #275068;
   --color-accent: #b13110;
   --color-surface: #0a0a0a;
+  --color-card: #496a97;
 }
 
 body {

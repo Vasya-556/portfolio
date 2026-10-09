@@ -9,7 +9,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    background: var(--color-secondary);
+    background: var(--color-card);
     border-radius: 0.5em;
     width: 22em;
     padding: 1em;

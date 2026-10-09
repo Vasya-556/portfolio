@@ -8,7 +8,6 @@ function Projects() {
   
   return (
     <section id='projects' className={styles.container}>
-      <h2>Projects:</h2>
       <ProjectsCards projects={projectsData ?? []}/>
     </section>
   )
