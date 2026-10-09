@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./link.module.css";
+import styles from "./Link.module.css";
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   text: string;
@@ -8,12 +8,12 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 function Link({ text, children, ...linkProps }: LinkProps) {
   return (
-    <div className={styles.container}>
-        <a {...linkProps} >
+    <>
+        <a {...linkProps} className={styles.link}>
           {text}
           {children}  
         </a>
-    </div>
+    </>
   )
 }
 

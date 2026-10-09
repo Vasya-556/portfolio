@@ -1,13 +1,13 @@
 import { PieChart } from 'react-minimal-pie-chart';
 import { projectsTypes } from '../../types';
-import styles from "./Projects.module.css";
+import styles from "./ProjectsCards.module.css";
 import { Link } from "../../components";
 
 type Props = {
     projects: projectsTypes.Project[]
 }
 
-function ProjectsCard({ projects }: Props) {
+function ProjectsCards({ projects }: Props) {
 
     const getCharacterCode = (word: string): number => {
         let sum = 0;
@@ -75,4 +75,4 @@ function ProjectsCard({ projects }: Props) {
   )
 }
 
-export default ProjectsCard
+export default ProjectsCards

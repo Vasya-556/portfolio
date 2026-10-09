@@ -1,4 +1,4 @@
-import styles from "./Skills.module.css";
+import styles from "./SkillsCards.module.css";
 
 type Props = {
     category: string,
@@ -9,7 +9,7 @@ type Props = {
     }[]
 }
 
-function SkillsCard({category, skills}: Props) {
+function SkillsCards({category, skills}: Props) {
   return (
     <div style={{ "display": "flex", "gap": "10px" }} className={styles.skillsCards}>
         <h4 className={styles.category}>{category}: </h4>
@@ -37,4 +37,4 @@ function SkillsCard({category, skills}: Props) {
   )
 }
 
-export default SkillsCard
+export default SkillsCards

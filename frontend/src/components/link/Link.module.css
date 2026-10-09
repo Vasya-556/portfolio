@@ -1,4 +1,4 @@
-.container a {
+.link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,10 +14,10 @@
     gap: 0.5em;
 }
 
-.container a:hover {
+.link:hover {
     background-color: var(--color-secondary);
 }
 
-.container a img {
+.link img {
     height: 100%;
 }

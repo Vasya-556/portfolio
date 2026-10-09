@@ -13,22 +13,3 @@
     display: flex;
     gap: 0.5em;
 }
-
-.container a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-primary);
-    border-radius: 0.5em;
-    border-style: none;
-    box-sizing: border-box;
-    color: var(--color-background);
-    text-decoration: none;
-    padding: 0.4em;
-    text-align: center;
-    height: 2em;
-}
-
-.container a:hover {
-    background-color: var(--color-secondary);
-}

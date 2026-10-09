@@ -1,4 +1,4 @@
-import { ProjectsCard } from '../.';
+import { ProjectsCards } from '../../components/';
 import projectsDataRaw from "../../data/projects.json";
 import { projectsTypes } from '../../types';
 import styles from "./Projects.module.css";
@@ -9,7 +9,7 @@ function Projects() {
   return (
     <section id='projects' className={styles.container}>
       <h2>Projects:</h2>
-      <ProjectsCard projects={projectsData ?? []}/>
+      <ProjectsCards projects={projectsData ?? []}/>
     </section>
   )
 }
