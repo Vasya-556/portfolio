@@ -1,12 +1,20 @@
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--color-accent);
     position: sticky;
     top: 0;
+    z-index: var(--z-header);
+}
+
+.content {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 97em;
+    width: 100%;
     padding: 1em;
-    z-index: var(--z-header);
 }
 
 .navbar {

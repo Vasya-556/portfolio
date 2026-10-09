@@ -4,11 +4,13 @@
     justify-content: flex-start;
     box-sizing: border-box;
     padding: 1em;
+    margin: 1em;
+    flex-wrap: wrap;
 }
 
 .category {
-    width: 5em;
-    padding: 1em;
+    width: 8em;
+    padding: 0.5em;
 }
 
 .card {
@@ -49,4 +51,10 @@
 
 .filled {
     background: var(--color-text);
+}
+
+@media (max-width: 35em) {
+    .skillsCards {
+        justify-content: center;
+    }
 }

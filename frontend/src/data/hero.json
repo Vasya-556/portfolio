@@ -2,7 +2,7 @@
     "Hero": {
         "name": "Vasyl Kobryn",
         "title": "Full-Stack Web Developer",
-        "degree": "Bachelor of Computer Science"
+        "description": "Bachelor of Computer Science"
     },
     "Contact me": {
         "Resume": {
