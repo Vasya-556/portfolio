@@ -3,8 +3,9 @@ import {
   Home, 
   Skills, 
   Projects,
+  NotFound
 } from "./pages";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/skills" element={<Skills/>}/>
           <Route path="/projects" element={<Projects/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </main>
     </BrowserRouter>
