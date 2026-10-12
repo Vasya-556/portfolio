@@ -1,4 +1,5 @@
-import { githubConfig } from "../config/index.js";
+import { appConfig, githubConfig } from "../config/index.js";
+import { AppError } from "../utils/index.js";
 
 type BaseProject = {
     html_url: string | null,
@@ -46,13 +47,20 @@ const getProjects = async (): Promise<Project[]> => {
         )
 
         if (!response.ok) {
-            throw new Error(`Can't fetch GitHub API\nStatus = ${response.status}\n${response.statusText}`);
+            let message;
+            if (appConfig.isProd) {
+                message = "Cant fetch Github data";
+            } 
+            else {
+                message = `Can't fetch GitHub API\nStatus = ${response.status}\n${response.statusText}`;
+            }
+            throw new AppError.AppError(502, message)
         }
 
         const result: unknown = await response.json();
 
         if (!isGithubResponse(result)){
-            throw new Error("Unexpected result from github API");
+            throw new AppError.AppError(502, "Unexpected result from github API")
         }
 
         repositories.push(...result)
@@ -120,14 +128,21 @@ const getLanguages = async (url: string): Promise<Languages> => {
             headers: githubHeaders,
         });
     if (!response.ok) {
-        throw new Error(`Couldn't fetch language\nStatus = ${response.status}\n${response.statusText}`);
+        let message;
+        if (appConfig.isProd) {
+            message = "Failed to fetch project languages";
+        }
+        else {
+            message = `Couldn't fetch language\nStatus = ${response.status}\n${response.statusText}`;
+        }
+        throw new AppError.AppError(502, message);
     }
     const result = await response.json();
     if (isGithubLanguagesResponse(result)){
         return result
     }
     else {
-        throw new Error("Unexpected result from language url")
+        throw new AppError.AppError(502, "Unexpected result from language url")
     }
 };
 
