@@ -1,26 +1,36 @@
 import {
     describe,
     it,
-    expect
+    expect,
+    afterEach,
+    beforeEach
 } from "vitest"
 import { createRoot } from "react-dom/client";
-import { act } from "react";
-import { 
-    Projects,
-    Skills,
-    Hero
-} from "../src/components"
+import { act } from "@testing-library/react";
+import Projects from "../src/pages/projects/Projects";
+import Skills from "../src/pages/skills/Skills";
+import Home from "../src/pages/home/Home";
 import skillsData from "../src/data/skills.json";
 import projectsData from "../src/data/projects.json";
 import heroData from "../src/data/hero.json";
 
+let container: HTMLDivElement;
+let root: ReturnType<typeof createRoot>;
+
+beforeEach(() => {
+    container = document.createElement("div");
+    document.body.appendChild(container);
+
+    root = createRoot(container);
+})
+
+afterEach(() => {
+    root.unmount();
+    container.remove();
+})
+
 describe("Test if json loads", () => {
     it("skills json", async () => {
-        const container = document.createElement("div");
-        document.body.appendChild(container);
-
-        const root = createRoot(container);
-
         await act(async () => {
             root.render(<Skills/>)
         });
@@ -30,35 +40,19 @@ describe("Test if json loads", () => {
                 expect(container.textContent).toContain(skill.name);
             }
         })
-
-        root.unmount();
-        container.remove();
     });
 
     it("hero json", async () => {
-        const container = document.createElement("div");
-        document.body.appendChild(container);
-
-        const root = createRoot(container);
-
         await act(async () => {
-            root.render(<Hero/>)
+            root.render(<Home/>)
         });
         
         Object.entries(heroData["Contact me"]).map(([name, item]) => {
             expect(container.textContent).toContain(item.text);
         })
-
-        root.unmount();
-        container.remove();
     });
 
     it("projects json", async () => {
-        const container = document.createElement("div");
-        document.body.appendChild(container);
-
-        const root = createRoot(container);
-
         await act(async () => {
             root.render(<Projects/>)
         });
@@ -66,8 +60,5 @@ describe("Test if json loads", () => {
         Object.entries(projectsData).map(([, project]) => {
             expect(container.textContent).toContain(project.name);
         })
-
-        root.unmount();
-        container.remove();
     });
 });

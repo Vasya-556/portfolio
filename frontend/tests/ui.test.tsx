@@ -1,11 +1,22 @@
 import {
     describe,
     it,
-    expect
+    expect,
+    afterEach
 } from "vitest";
 import App from "../src/App";
 import { createRoot } from "react-dom/client";
-import { act } from "react";
+import { 
+    cleanup, 
+    act, 
+    waitFor
+} from "@testing-library/react";
+
+afterEach(() => {
+    cleanup();
+    document.documentElement.removeAttribute("data-theme");
+    localStorage.clear();
+});
 
 describe("Test ui", () => {
     it("test App.tsx", async () => {
@@ -14,29 +25,65 @@ describe("Test ui", () => {
 
         const root = createRoot(container);
 
-        await act(async () => {
-            root.render(<App/>)
-        });
+        try {
+            await act(async () => {
+                root.render(<App/>);
+            });
 
-        expect(container.querySelector("header")).not.toBeNull();
-        expect(container.querySelector("#home")).not.toBeNull();
-        expect(container.querySelector("#skills")).not.toBeNull();
-        expect(container.querySelector("#projects")).not.toBeNull();
+            await waitFor(() => {
+                expect(container.querySelector("header")).not.toBeNull();
+                expect(
+                    container.querySelector("#home, #skills, #projects")
+                ).not.toBeNull();
+            });
+        }
+        finally {
+            await act(async () => {
+                root.unmount();
+            });
+        }
     })
 
     it("test theme toggle", async () => {
-        const toggle = document.querySelector(".toggle");
+        const container = document.createElement("div");
+        document.body.appendChild(container);
 
-        if (!(toggle instanceof HTMLInputElement)){
-            throw new Error("Theme toggle not found");
+        const root = createRoot(container);
+
+        try {
+            await act(async () => {
+                root.render(<App/>);
+            });
+
+            let toggle: HTMLInputElement | null = null;
+
+            await waitFor(() => {
+                toggle = container.querySelector(".toggle");
+                expect(toggle).not.toBeNull();
+            });
+
+            if(!toggle){
+                throw new Error("Theme toggle not found");
+            }
+
+            await waitFor(() => {
+                expect(document.documentElement.dataset.theme).toBeDefined();
+            })
+
+            const theme = document.documentElement.dataset.theme;
+
+            await act(async () => {
+                toggle!.click();
+            })
+
+            await waitFor(() => {
+                expect(document.documentElement.dataset.theme).not.toBe(theme);
+            })
         }
-
-        const theme = document.documentElement.dataset.theme;
-
-        await act(async () => {
-            toggle.click();
-        })
-
-        expect(document.documentElement.dataset.theme).not.toBe(theme);
+        finally {
+            await act(async () => {
+                root.unmount();
+            });
+        }
     })
 })
