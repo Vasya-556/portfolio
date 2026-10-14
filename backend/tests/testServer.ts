@@ -4,7 +4,14 @@ import { appConfig } from "../src/config/index.js";
 
 let baseURL: string;
 
-beforeAll(() => {
+beforeAll(async () => {
+    if (!server.listening){
+        await new Promise<void>((resolve, reject) => {
+            server.once("error", reject);
+            server.listen(0, resolve)
+        })
+    }
+
     const address = server.address();
 
     if (!address || typeof address === "string"){
