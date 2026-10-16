@@ -14,16 +14,33 @@ jobs:
             - uses: actions/checkout@v3
               with: 
                 node-version: 22
-            - run: npm ci
+            
+            - name: Backend
               working-directory: backend
-            - run: npm test
+              run: |
+                npm ci
+                npm test -- --run
+                npm run build
+
+            - name: Start backend
               working-directory: backend
-            - run: npm run build
-              working-directory: backend
+              run: npm run dev > /tmp/backend.log 2>&1 &
+              
+            - name: Frontend
+              working-directory: frontend
+              run: |
+                npm ci
+                npm test -- --run
+                npm run build
+
         env:
+            # backend
             FRONTEND_URL: ${{ vars.FRONTEND_URL }}
             IS_PRODUCTION: ${{ vars.IS_PRODUCTION }}
             PORT: ${{ vars.PORT }}
             PROTOCOL: ${{ vars.PROTOCOL }}
             GH_USERNAME: ${{ vars.GH_USERNAME }}
             GH_TOKEN: ${{ secrets.GH_TOKEN }}
+            # frontend
+            VITE_BACKEND_URL: ${{ vars.VITE_BACKEND_URL }}
+            VITE_IS_PRODUCTION: ${{ vars.VITE_IS_PRODUCTION }}
