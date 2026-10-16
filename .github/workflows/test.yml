@@ -20,3 +20,10 @@ jobs:
               working-directory: backend
             - run: npm run build
               working-directory: backend
+        env:
+            FRONTEND_URL: ${{ vars.FRONTEND_URL }}
+            IS_PRODUCTION: ${{ vars.IS_PRODUCTION }}
+            PORT: ${{ vars.PORT }}
+            PROTOCOL: ${{ vars.PROTOCOL }}
+            GH_USERNAME: ${{ vars.GH_USERNAME }}
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
