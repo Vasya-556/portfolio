@@ -2,68 +2,68 @@
   "Languages": [
     {
       "name": "JavaScript",
-      "icon": "/assets/js.svg",
+      "icon": "/portfolio/assets/js.svg",
       "proficiency": 5
     },
     {
       "name": "TypeScript",
-      "icon": "/assets/ts.svg",
+      "icon": "/portfolio/assets/ts.svg",
       "proficiency": 5
     },
     {
       "name": "Python",
-      "icon": "/assets/python.svg",
+      "icon": "/portfolio/assets/python.svg",
       "proficiency": 4
     }
   ],
   "Web": [
     {
       "name": "HTML",
-      "icon": "/assets/html.svg",
+      "icon": "/portfolio/assets/html.svg",
       "proficiency": 4
     },
     {
       "name": "CSS",
-      "icon": "/assets/css.svg",
+      "icon": "/portfolio/assets/css.svg",
       "proficiency": 3
     },
     {
       "name": "Node.js",
-      "icon": "/assets/node.js.svg",
-      "proficiency": 3
+      "icon": "/portfolio/assets/node.js.svg",
+      "proficiency": 4
     },
     {
       "name": "Express.js",
-      "icon": "/assets/express.js.svg",
+      "icon": "/portfolio/assets/express.js.svg",
       "proficiency": 4
     },
     {
       "name": "React",
-      "icon": "/assets/react.svg",
+      "icon": "/portfolio/assets/react.svg",
       "proficiency": 5
     }
   ],
   "Database": [
     {
       "name": "PostgreSQL",
-      "icon": "/assets/postgreSQL.svg",
+      "icon": "/portfolio/assets/postgreSQL.svg",
       "proficiency": 3
     }
   ],
   "Tools": [
     {
       "name": "Git",
-      "icon": "/assets/git.svg",
+      "icon": "/portfolio/assets/git.svg",
       "proficiency": 3
     },
     {
       "name": "GitHub",
-      "icon": "/assets/github.svg",
+      "icon": "/portfolio/assets/github.svg",
       "proficiency": 4
     },
     {
       "name": "VS Code",
-      "icon": "/assets/vs code.svg",
+      "icon": "/portfolio/assets/vs code.svg",
       "proficiency": 5
     }
   ]

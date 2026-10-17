@@ -9,19 +9,19 @@
             "href": "./resume.pdf",
             "download": true,
             "text": "Resume",
-            "src": "/assets/download.svg"
+            "src": "/portfolio/assets/download.svg"
         },
         "Github": {
             "href": "https://github.com/Vasya-556",
             "download": true,
             "text": "GitHub",
-            "src": "/assets/github.svg"
+            "src": "/portfolio/assets/github.svg"
         },
         "Email": {
             "href": "mailto:kobrynvasyl2004@gmail.com",
             "download": true,
             "text": "Gmail",
-            "src": "/assets/gmail.svg"
+            "src": "/portfolio/assets/gmail.svg"
         }
     }
 }

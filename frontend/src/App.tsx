@@ -2,7 +2,7 @@ import {
   Suspense, 
   lazy 
 } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import styles from "./App.module.css";
 import { Tailspin } from 'ldrs/react';
 import 'ldrs/react/Tailspin.css';
@@ -19,7 +19,7 @@ function App() {
     .trim();
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense 
         fallback={<Tailspin
           size="40"
@@ -73,7 +73,7 @@ function App() {
             </Suspense>}/>
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
