@@ -17,7 +17,7 @@ jobs:
               working-directory: frontend
               run: |
                 npm ci
-                git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+                git remote set-url origin https://git:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
                 npm run generate-projects
                 npm run deploy
         env: 
