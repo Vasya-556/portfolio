@@ -11,15 +11,17 @@ jobs:
         container: 
             image: node:22
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
             
             - name: Run projects generator
               working-directory: frontend
               run: |
                 npm ci
+                git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
                 npm run generate-projects
                 npm run deploy
         env: 
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
             # frontend
             VITE_BACKEND_URL: ${{ vars.VITE_BACKEND_URL }}
             VITE_IS_PRODUCTION: ${{ vars.VITE_IS_PRODUCTION }}
