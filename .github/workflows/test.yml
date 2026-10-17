@@ -15,6 +15,9 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
+            - name: Configure gh-pahes
+              run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            
             - name: Backend
               working-directory: backend
               run: |
@@ -31,7 +34,6 @@ jobs:
               run: |
                 npm ci
                 npm test -- --run
-                npm run build
                 git remote set-url origin https://git:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
                 npm run deploy
 
