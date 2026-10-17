@@ -1,0 +1,1 @@
+import{r as e,t}from"./index-D-k4Igc9.js";import{n}from"./Header-CRHuBPbs.js";var r={container:`_container_1vlxh_1`},i=t();function a(){let t=e();return(0,i.jsxs)(`div`,{className:r.container,children:[(0,i.jsx)(`h1`,{children:`404 Page not found`}),(0,i.jsx)(n,{onClick:()=>{t(-1)},text:`Go back`})]})}export{a as default};
