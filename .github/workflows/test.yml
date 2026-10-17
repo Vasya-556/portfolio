@@ -7,14 +7,14 @@ on:
 
 jobs:
     test:
+        permissions: 
+            contents: write
         runs-on: ubuntu-latest
         container: 
             image: node:22
         steps:
             - uses: actions/checkout@v3
-              with: 
-                node-version: 22
-            
+
             - name: Backend
               working-directory: backend
               run: |
@@ -32,6 +32,7 @@ jobs:
                 npm ci
                 npm test -- --run
                 npm run build
+                npm run deploy
 
         env:
             # backend
