@@ -20,5 +20,6 @@ jobs:
                 npm run generate-projects
                 npm run deploy
         env: 
+            # frontend
             VITE_BACKEND_URL: ${{ vars.VITE_BACKEND_URL }}
             VITE_IS_PRODUCTION: ${{ vars.VITE_IS_PRODUCTION }}
